@@ -13,7 +13,7 @@ export const StyleHeaderContainer = styled.div`
 export const StyleLogoContainer = styled(Link)`
   height: 100%;
   width: 70px;
-  padding: 25px;
+  padding: 10px;
 `;
 
 export const StyleOptionsContainer = styled.div`
