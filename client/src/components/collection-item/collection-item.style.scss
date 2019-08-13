@@ -3,8 +3,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 350px;
   position: relative;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 
   .image {
     width: 100%;
@@ -20,6 +25,13 @@
     opacity: 0.7;
     top: 255px;
     display: none;
+
+    @media screen and (max-width: 800px) {
+      display: block;
+      opacity: 0.9;
+      min-width: unset;
+      padding: 0 10px;
+    }
   }
 
   &:hover {
@@ -30,6 +42,16 @@
     .custom-button {
       opacity: 0.85;
       display: flex;
+    }
+
+    @media screen and (max-width: 800px) {
+      .image {
+        opacity: unset;
+      }
+
+      .custom-button {
+        opacity: unset;
+      }
     }
   }
 
@@ -43,6 +65,10 @@
     .name {
       width: 80%;
       margin-bottom: 15px;
+
+      @media screen and (max-width: 800px) {
+        width: 70%;
+      }
     }
   }
 }

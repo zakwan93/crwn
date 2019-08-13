@@ -3,6 +3,10 @@
   flex-direction: column;
   margin-bottom: 30px;
 
+  @media screen and (max-width: 800px) {
+    align-items: center;
+  }
+
   .title {
     font-size: 28px;
     margin-bottom: 25px;
@@ -11,5 +15,18 @@
   .preview {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 800px) {
+      display: grid;
+      width: 100%;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      // grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      // grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
   }
 }

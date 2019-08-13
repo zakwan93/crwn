@@ -12,7 +12,7 @@ import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up
 import { selectCurrentUser } from "./redux/user/user.selector";
 import { checkUserSession } from "./redux/user/user.actions";
 
-import "./App.css";
+import { GlobalStyle } from "./global.styles";
 
 const App = ({ currentUser, checkUserSession }) => {
   useEffect(() => {
@@ -21,6 +21,7 @@ const App = ({ currentUser, checkUserSession }) => {
 
   return (
     <div>
+      <GlobalStyle />
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
